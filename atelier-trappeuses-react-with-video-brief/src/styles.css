@@ -1,0 +1,39 @@
+/* Minimal neutral styling (no Tailwind needed for this standalone build) */
+:root {
+  --bg: #f6f6f6;
+  --fg: #111;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --card: #fff;
+  --accent: #000;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+button { cursor: pointer; }
+.app { min-height: 100vh; display: flex; }
+.sidebar { width: 260px; border-right: 1px solid var(--border); background: var(--card); padding: 16px; display: flex; flex-direction: column; justify-content: space-between; }
+.sidebar h2 { margin: 0 0 12px; font-size: 18px; font-weight: 700; display:flex; gap:8px; align-items:center;}
+.group-label { font-size: 12px; color: var(--muted); font-weight: 700; margin: 8px 0; display:flex; align-items:center; gap:6px;}
+.nav-btn { width: 100%; text-align: left; padding: 8px 12px; border-radius: 10px; border: 1px solid transparent; background: transparent; }
+.nav-btn:hover { background: #f3f4f6; }
+.nav-btn.active { background: #000; color: #fff; }
+.advanced-toggle { font-size: 13px; color: #374151; background: transparent; border: none; display:flex; align-items:center; gap:6px; margin-top: 16px; margin-bottom: 8px;}
+.advanced-list { padding-left: 12px; display: grid; gap: 6px; }
+.version { font-size: 11px; color: #9ca3af; }
+.content { flex: 1; padding: 24px; }
+.title { font-size: 22px; font-weight: 800; margin: 0 0 16px; display:flex; gap:8px; align-items:center;}
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 20px; box-shadow: 0 1px 2px rgba(0,0,0,0.03); }
+.card h3 { margin: 0 0 10px; font-size: 18px; }
+.pillbar { display:flex; flex-wrap: wrap; gap:8px; margin-bottom: 12px; }
+.pill { padding: 6px 10px; border-radius: 999px; border: 1px solid var(--border); background:#fff; }
+.pill.active { background:#000; color:#fff; border-color:#000; }
+.field { display:block; margin-bottom: 10px; }
+.field-label { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+.input, .textarea { width:100%; border: 1px solid var(--border); border-radius: 12px; padding: 10px; }
+.textarea { min-height: 120px; }
+pre { white-space: pre-wrap; background:#111; color:#f9fafb; border-radius: 12px; padding: 16px; font-size: 13px; max-height: 360px; overflow:auto; }
+.toolbar { display:flex; gap:8px; }
+.btn { padding:10px 14px; border-radius:12px; border:1px solid var(--border); background:#fff; }
+.btn.primary { background:#000; color:#fff; border-color:#000; }
+.grid { display:grid; gap:16px; }
+@media(min-width: 900px) { .grid-3 { grid-template-columns: repeat(3, 1fr);} }
